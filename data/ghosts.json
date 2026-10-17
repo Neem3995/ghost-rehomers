@@ -1,0 +1,5 @@
+[
+  {"id":"hush","name":"Hush","rarity":"Common","tell":"Hums beside a music box.","likedBaitId":"music-box","dislikedBaitId":"candle","baseModel":"placeholder-ghost","tint":[240,240,255],"accessories":[],"personality":"A shy singer who prefers a quiet audience."},
+  {"id":"wick","name":"Wick","rarity":"Uncommon","tell":"Flickers beside an unlit candle.","likedBaitId":"candle","dislikedBaitId":"tea","baseModel":"placeholder-ghost","tint":[160,210,255],"accessories":[],"personality":"A little night watchman who dislikes the dark."},
+  {"id":"mallow","name":"Mallow","rarity":"Rare","tell":"Circles a cold teacup and makes a sipping sound.","likedBaitId":"tea","dislikedBaitId":"music-box","baseModel":"placeholder-ghost","tint":[200,160,240],"accessories":[],"personality":"A sleepy host who always saves you a seat."}
+]

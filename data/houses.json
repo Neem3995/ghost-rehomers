@@ -1,0 +1,17 @@
+[
+  {
+    "id":"quiet-cottage",
+    "name":"Quiet Cottage",
+    "rooms":[
+      {"id":"parlor","name":"Parlor","hidingSpots":["armchair","side-table"]},
+      {"id":"kitchen","name":"Kitchen","hidingSpots":["cupboard","breakfast-table"]},
+      {"id":"bedroom","name":"Bedroom","hidingSpots":["wardrobe","bedside-table"]}
+    ],
+    "spawnTable":[
+      {"ghostId":"hush","roomId":"parlor","weight":60},
+      {"ghostId":"wick","roomId":"kitchen","weight":25},
+      {"ghostId":"mallow","roomId":"bedroom","weight":11}
+    ],
+    "timerConfigKey":"HouseDurationSeconds"
+  }
+]

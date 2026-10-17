@@ -1,0 +1,18 @@
+# Local credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Generated files
+__pycache__/
+*.py[cod]
+node_modules/
+.DS_Store
+Thumbs.db
+
+# Local Studio places and session locks; publish reviewed snapshots separately
+*.rbxl
+*.rbxlx
+*.lock

@@ -1,0 +1,5 @@
+[
+  {"id":"music-box","name":"Music Box","effectTag":"melody","earnedBy":"Free test supply at house entry."},
+  {"id":"candle","name":"Unlit Candle","effectTag":"candle","earnedBy":"Free test supply at house entry."},
+  {"id":"tea","name":"Cold Tea","effectTag":"tea","earnedBy":"Free test supply at house entry."}
+]
