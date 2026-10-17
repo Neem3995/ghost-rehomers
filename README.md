@@ -20,11 +20,12 @@ Shared coordination: `STATUS.md` (current gate, active work, requests) and `REVI
 Folder: `C:\\Users\\hoese\\Desktop\\Roblox\\ghost-rehomers`. When both agents finish, each leaves `REPORT-claude-code.md` / `REPORT-codex.md` (template: `docs/REPORT-TEMPLATE.md`) for review.
 
 ## Setup checklist
-- [ ] Roblox Studio installed, signed in, a new empty place open and saved
-- [ ] Studio set up as an MCP server (Assistant settings) or the official `roblox-studio-agent-plugin` installed for each agent
-- [ ] Rojo and Git installed
-- [ ] Open this folder in Claude Code and in Codex
-- [ ] Run Claude Code's first prompt and Codex's first prompt from `docs/PROMPTS.md`
+
+Only unfinished or unverified steps remain. Remove each item when verified complete; remove this section when none remain.
+
+- [ ] Confirm Roblox Studio is signed in to the intended account.
+- [ ] Verify Claude Code can connect to this project's Studio instance through MCP.
+- [ ] Confirm Claude Code is working in this folder and has started its first prompt from `docs/PROMPTS.md`.
 
 ## Ground rules
 Token budget: both agents read narrowly, stay in scope, write short replies, test narrowly and keep sessions small (full rule at the bottom of `CLAUDE.md` and `AGENTS.md`).
