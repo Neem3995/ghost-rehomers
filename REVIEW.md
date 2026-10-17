@@ -13,16 +13,35 @@ Checklist applied: server authority, request validation, exploits, round cleanup
 Verdict: approve / approve with fixes / request changes.
 
 ## Findings
+### Re-review: uncommitted F01–F04 fixes — 2026-10-17
+
+Verdict: **approve the fixes in source; gameplay acceptance remains pending**. No new actionable defect found in the seven changed source files relative to ee37a82. No src/ edits or feature merge by Codex. Review identity is captured in docs/gate1-fix-review-hashes.json; Config SHA256 begins e7d657c6ba0d043a, matching Claude's report. This approval covers those bytes, not future edits or a claimed deployed build.
+
+| Finding | Codex disposition | Evidence inspected |
+| --- | --- | --- |
+| F01 | Fixed in source; manual lifecycle tests pending | releaseJar clears all held sources and sends release; connected to focus loss, controller disconnect, character removal and death. Old key state is not re-added by Heartbeat. Claude reports injected-key death/respawn checks; actual focus loss/disconnect not run. |
+| F02 | Fixed in source | Ingress rate gate precedes payload/placement work; every rejection uses an independently throttled notice helper. Claude reports 200 rejected requests yielding one notice and normal recovery; not independently rerun. |
+| F03 | Fixed in source | GhostService reset invokes listeners before destroying/replacing ghosts; JarService's registered callback clears aims and catches. Registration occurs before startup reset. Claude reports comparative stale-aim tests with/without fix and normal-timeout regression; not independently rerun. |
+| F04 | Fixed in source | Eye fallback, floor probe and notice/toast durations now reference Config; values preserved. |
+
+Debug hook review: Main creates DebugResetHouse only inside RunService:IsStudio(), as a BindableFunction under ServerStorage. No RemoteEvent or replicated access was added. Official [ServerStorage](https://create.roblox.com/docs/reference/engine/classes/ServerStorage) and [RunService](https://create.roblox.com/docs/reference/engine/classes/RunService) references checked. No client reset exposure found in source.
+
+Independent local checks: Python content validator PASS; git diff --check PASS; Rojo 7.7.1 build PASS to a temporary rbxlx. Packaging does not establish Luau execution, place geometry, live sync or gameplay acceptance. No Studio mutations or new gameplay tests performed in this re-review.
+
+Remaining acceptance: real PC/phone 10-catch streaks, actual focus-loss release, controller disconnect, gamepad/touch usability, two-client co-op/rewards/leave, obstacle LOS. House timer remains unimplemented; the proposed deferral requires the user's scope decision. Fixes remain uncommitted on the feature checkout at review time; source publication is not complete.
+
+The initial findings and verdict below are historical; F01–F04 are superseded by this re-review.
+
 ### feat/gate1-foundation — 2026-10-17
 
 Reviewed `060fc76..ee37a821489ee8115eb2129e6815746538407b79` (13 changed files). Locations refer to that feature snapshot. Findings are source-based; no new gameplay reproduction was performed.
 
 | # | Severity | Location | What goes wrong | Suggested fix | Status |
 | --- | --- | --- | --- | --- | --- |
-| F01 | should-fix | src/client/Main.client.luau:195–218, 237–250 | Hold F/mouse/R2, move focus away and release while unfocused. No focus-loss cleanup exists; if InputEnded is missed, jarSources stays set and Heartbeat keeps refreshing aim indefinitely. Server AimTimeout cannot clear continuously refreshed input. | Clear all held sources on WindowFocusReleased and send release; also clear on character removal/controller disconnect. Verify releasing while unfocused requires a fresh press on return. | open |
-| F02 | should-fix | src/server/BaitService.luau:25–27 | Every valid-ID request rejected by cooldown fires a Notice. Hundreds of rejected requests still produce hundreds of outbound events and client flash timers. Placement is throttled but rejection feedback bypasses that protection. | Add an ingress rate limit before bait processing; silently discard excess traffic and independently throttle rejection notices. Verify bounded placements AND notices during flood, then recovery. | open |
-| F03 | should-fix | src/server/GhostService.luau:192–204; src/server/JarService.luau:16, 66–86 | House reset drops ghost catch records through state listeners but never clears aims. A pre-reset aim remains eligible for up to AimTimeout (0.5 s). Immediately baiting the new ghost can advance it using input from the previous run. | Coordinate a JarService reset that clears aims and catches when the house resets. Reset/rebait without a new aim packet: progress must remain zero. | open |
-| F04 | nit | src/server/RequestGuard.luau:61, 93; src/client/Main.client.luau:339, 346 | Fallback eye offset, floor raycast offsets/reach and notice durations remain literals despite the single-Config rule. | Move these tunables to Config; structural constants and decorative values need not move. | open |
+| F01 | should-fix | src/client/Main.client.luau:195–218, 237–250 | Hold F/mouse/R2, move focus away and release while unfocused. No focus-loss cleanup exists; if InputEnded is missed, jarSources stays set and Heartbeat keeps refreshing aim indefinitely. Server AimTimeout cannot clear continuously refreshed input. | Clear all held sources on WindowFocusReleased and send release; also clear on character removal/controller disconnect. Verify releasing while unfocused requires a fresh press on return. | fixed in source; see re-review |
+| F02 | should-fix | src/server/BaitService.luau:25–27 | Every valid-ID request rejected by cooldown fires a Notice. Hundreds of rejected requests still produce hundreds of outbound events and client flash timers. Placement is throttled but rejection feedback bypasses that protection. | Add an ingress rate limit before bait processing; silently discard excess traffic and independently throttle rejection notices. Verify bounded placements AND notices during flood, then recovery. | fixed in source; see re-review |
+| F03 | should-fix | src/server/GhostService.luau:192–204; src/server/JarService.luau:16, 66–86 | House reset drops ghost catch records through state listeners but never clears aims. A pre-reset aim remains eligible for up to AimTimeout (0.5 s). Immediately baiting the new ghost can advance it using input from the previous run. | Coordinate a JarService reset that clears aims and catches when the house resets. Reset/rebait without a new aim packet: progress must remain zero. | fixed in source; see re-review |
+| F04 | nit | src/server/RequestGuard.luau:61, 93; src/client/Main.client.luau:339, 346 | Fallback eye offset, floor raycast offsets/reach and notice durations remain literals despite the single-Config rule. | Move these tunables to Config; structural constants and decorative values need not move. | fixed in source; see re-review |
 
 Checklist applied:
 

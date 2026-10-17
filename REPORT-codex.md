@@ -1,6 +1,14 @@
 # Codex report — 2026-10-17
 
-## Latest session: Gate 1 source review
+## Latest session: F01–F04 re-review
+
+Approved all four fixes in the uncommitted source on ee37a82; no new actionable finding in the seven changed source files. releaseJar covers input lifecycle, bait ingress and notices are independently throttled, house reset clears aims/catches, and requested tunables moved to Config. Studio-only ServerStorage reset hook acceptable in source. Exact reviewed file hashes are in docs/gate1-fix-review-hashes.json.
+
+Independent checks: Python data validator PASS, diff whitespace PASS, Rojo 7.7.1 packaging PASS to temporary rbxlx. These do not certify execution, live sync, world geometry or gameplay. Claude's regression report was inspected, not independently rerun. Focus loss/controller disconnect, real PC/phone streaks, gamepad, two-client co-op/leave and obstacle LOS remain pending. House-timer deferral needs the user's decision.
+
+No src/ edits, feature commit or merge by Codex. Only completed review documents published to main; Claude's source fixes remain uncommitted at review time. Gate 1 remains open.
+
+## Previous session: initial Gate 1 source review
 
 Reviewed all 13 changed files in `060fc76..ee37a82` against AGENTS.md. Verdict: **request changes**. REVIEW.md records three should-fix findings: stale held input after focus loss, unbounded bait rejection notices, and pre-reset aim surviving house reset. A fourth finding is a Config nit. No src/ edits, Studio mutations or feature merge.
 
