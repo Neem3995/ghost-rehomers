@@ -14,7 +14,7 @@ Gate 1: Foundation (time box ~3 weeks at ~8 hrs/week; placeholder). Exit: 10 cat
 ## Active work
 | Agent | Task | Branch | State |
 | --- | --- | --- | --- |
-| Claude Code | Repo + Rojo setup, then Gate 1 greybox | feat/gate1-foundation | not started |
+| Claude Code | Repo + Rojo setup, then Gate 1 greybox | feat/gate1-foundation | started; user confirmed Claude Code is in |
 | Codex | Doc QA, data schema + starter data, Gate 1 test plan | main (initial publication authorized by user) | support files complete; code review pending |
 
 ## Requests between agents
@@ -28,6 +28,7 @@ Gate 1: Foundation (time box ~3 weeks at ~8 hrs/week; placeholder). Exit: 10 cat
 - Three-room data is starter content only; Gate 1 runtime remains one room/one ghost.
 
 ## Session log
+- 2026-10-17, Codex: User confirmed Claude Code is in and Rojo is installed. Removed Claude folder/start checklist item; Studio account sign-in and Claude MCP verification remain pending. Builder feature checkout left untouched.
 - 2026-10-17, Codex: Recorded LordNxtmen as the intended Studio account for all Roblox games; README sign-in verification remains pending.
 - 2026-10-17, Codex: Removed verified README setup steps: Rojo 7.7.1/Git 2.53.0 installed, saved project place open in Studio, Codex Studio MCP connected, Codex folder/prompt complete. Remaining checklist covers intended Studio account and Claude folder/prompt/MCP verification; remove section after those are confirmed. Builder's untracked source/config left untouched.
 - 2026-10-17, Codex: User authorized public repository creation and committing finished support files to main. Added ignore rules for credentials, generated files and local Studio place/lock files. Gameplay remains untested; initial publication does not close Gate 1.
