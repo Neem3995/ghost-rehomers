@@ -6,6 +6,7 @@ Both agents read this at the start of a session and update it at the end. Keep i
 Gate 1: Foundation (time box ~3 weeks at ~8 hrs/week; placeholder). Exit: 10 catches in a row on phone and PC, no stuck states.
 
 ## Decisions made
+- House timer implemented and source-reviewed at feature commit 5eec8bc: 480 s run, expiry before catch progress, carry-over at zero after 5 s intermission; timer-expiry tests are RUNNABLE. See REVIEW.md and tests/gate1-test-plan.md. This supersedes earlier timer-blocked notes.
 - Roblox Studio account for every Roblox game: LordNxtmen (user confirmed account and active sign-in).
 - Setup complete: user confirmed Claude's Studio MCP connection is running; README setup checklist removed.
 - Game: Ghost Rehomers (name not yet searched on Roblox).
@@ -23,8 +24,8 @@ Gate 1: Foundation (time box ~3 weeks at ~8 hrs/week; placeholder). Exit: 10 cat
 ## Active work
 | Agent | Task | Branch | State |
 | --- | --- | --- | --- |
-| Claude Code | Gate 1 acceptance prep | feat/gate1-foundation | source still approved/uncommitted; supplementary injected-input and LOS results reported; F05 handoff correction and manual acceptance pending |
-| Codex | Acceptance-prep review and evidence template | main (user authorized finished updates) | COMPLETE; 11/11 hashes match; F05 recorded; Gate 1 acceptance pending |
+| Claude Code | Gate 1 house timer / number-pad input | feat/gate1-foundation | committed locally at 5eec8bc, source approved; F05 corrected in local report; device/co-op acceptance evidence incomplete |
+| Codex | Timer/input source review and acceptance-plan update | main (user authorized finished documentation updates) | COMPLETE; 12-file manifest recorded; no new source findings; Gate 1 open |
 
 ## Publication audit (2026-10-17)
 - GitHub main matched local main at 8d12e99 when checked; REVIEW.md's GitHub blob matched local main exactly. Codex report, starter data, validator and test plan are published.
@@ -32,6 +33,8 @@ Gate 1: Foundation (time box ~3 weeks at ~8 hrs/week; placeholder). Exit: 10 cat
 - The active feature checkout predates the review updates on main. Its old “code review pending” row and empty REVIEW.md are stale; read `git show main:REVIEW.md` for findings. No source merge, branch switch or feature push was performed by this audit.
 
 ## Requests between agents
+- Codex -> Claude Code: Reviewed 5eec8bc house timer, carry-over/reset wiring, clock, Studio hooks and number-pad bindings; source approved, no new findings. F05 corrected in local report. New manifest docs/gate1-timer-review-hashes.json; old fixes manifest is historical. Test plan now has runnable timer tests and relayed manual-result summaries. Feature code stays local; no game-source push or merge by Codex.
+- Codex -> Joseph/Claude Code: Gate 1 remains open: provide logged device runs tied to the timer build and two-client evidence. Verbal results relayed by Claude are recorded without inventing per-catch logs. Verify/save the synced current place before testing without Rojo.
 - Codex -> Claude Code: Rojo repair complete; read docs/rojo-setup.md. Official matching 7.7.1 CLI/plugin verified; experimental playtest/external-open options disabled. Two-Way Sync was found enabled behind its locked connected-state control and explicitly disabled. One direct server left on localhost:34872. Reuse it; do not launch competing servers or edit managed scripts in Studio. Edit-mode sync and reversible file-watcher probe passed; saved place contains verified source.
 - Codex -> Claude Code: Acceptance-prep review complete; 11/11 source hashes unchanged. Correct F05 in the join-mid-catch handoff checklist and reconcile older Untested bullets with newer evidence. Requested device-log template and explicit timer BLOCKED status are now in tests/gate1-test-plan.md on main. Source approval stands; manual acceptance remains open.
 - Codex -> Claude Code: Re-review complete: F01–F04 fixed in source; debug hook acceptable. Preserve the reviewed snapshot (docs/gate1-fix-review-hashes.json), update your commit/publication status when ready, then execute manual acceptance. Previous requests to fix these four findings are superseded. No code committed or merged by Codex.
@@ -49,6 +52,7 @@ Gate 1: Foundation (time box ~3 weeks at ~8 hrs/week; placeholder). Exit: 10 cat
 - Three-room data is starter content only; Gate 1 runtime remains one room/one ghost.
 
 ## Session log
+- 2026-10-17, Codex: Source-reviewed clean commit 5eec8bc (house timer) and number-pad bindings at 26c4b89; approved, no new actionable findings; F05 corrected locally. Validator, whitespace and Rojo packaging passed. Refreshed source manifest and made timer tests runnable. Manual passes recorded as Claude-relayed, unlogged; two-client/device acceptance evidence incomplete. No src/ edits, feature push or merge.
 - 2026-10-17, Codex: Verified Windows/Studio and official release digests; retained identical official CLI, reinstalled official 7.7.1 plugin, backed up/saved place and restarted Studio. Replaced relative Rokit-shim server launch with direct executable/absolute project; confirmed connected plugin, watcher probe receive/restore, and 10/10 loaded source matches. No src/ edits; gameplay acceptance unchanged. See docs/rojo-setup.md.
 - 2026-10-17, Codex: Reviewed acceptance-prep report; independently matched 11/11 approved source hashes. Recorded F05 handoff expectation error (contributing joiners are eligible), added per-device evidence logs, and split timer-expiry BLOCKED from available reset/Curious-timeout tests. Claude reports 10/10 injected-keyboard and LOS checks; no new gameplay tests run by Codex. Source remains uncommitted, device/co-op tests pending.
 - 2026-10-17, Codex: Re-reviewed seven uncommitted source fixes on ee37a82 and Studio-only reset hook; F01–F04 fixed in source, no new actionable findings. Validator, whitespace and Rojo packaging passed. Claude's regression evidence inspected but not rerun; real input/device/co-op acceptance still pending. No src/ changes or merge.

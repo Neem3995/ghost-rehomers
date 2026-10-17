@@ -1,0 +1,18 @@
+{
+  "commit": "5eec8bc1135b103982541a7faf3d9c1ecb0a56cf",
+  "state": "clean committed feature source reviewed by Codex; raw working-tree file bytes",
+  "sha256": {
+    "src/client/Main.client.luau": "94ae15b1817f19244a2d4f3ebfe8a339a64c6b962eec2fbc78e0125712eb7b85",
+    "src/server/BaitService.luau": "f39fdc0a33baf9823f9ce69b2020c75f9a2cfe68b2a382f2b7ad77042d4b3cb6",
+    "src/server/GhostService.luau": "3802cb5443afc7a993d244a0580bf97b35e4fe779ae92d9f055bbfc72fd66929",
+    "src/server/HouseService.luau": "8670caa296b0ccaca2f88c13eddfb9833c750d84ce432ac75f5275b7ae864dfb",
+    "src/server/JarService.luau": "565f2f6c5509903d0900559bbe93a341355a281fea3ad18e84d4ad396f4fb3b9",
+    "src/server/Main.server.luau": "94ee9fd2bbb107de501e9b292731490d72f7dbdd1b591b2e127ef90cd6107a15",
+    "src/server/RequestGuard.luau": "ae73e2a3b478507ecf634253f9c5e0f827feea1ae9b59a7bc689187abbde492f",
+    "src/shared/Config.luau": "2e4325922e259a8955815edd494e981f0b158a49a81ffa74af7fa860bb275d7f",
+    "src/shared/Content.luau": "3d7555108aced73ba82c05b331e45362363fe7d0cd3454818b99bf70234d74f3",
+    "src/shared/Grade.luau": "ecc081b55802cc254c13d94e0da2aebc02c285f8e62dca00e6475a7468a4bf03",
+    "src/shared/Net.luau": "d26013bcb6cadc35fea956da89d6a0020587b075476ddc47d8b995063d5bd46a",
+    "default.project.json": "8e8891cd89d4a0519f9b37adaae115d183be8de420c6bcfb92a35ea106684e27"
+  }
+}

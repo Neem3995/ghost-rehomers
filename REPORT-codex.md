@@ -1,6 +1,12 @@
 # Codex report — 2026-10-17
 
-## Latest session: acceptance-prep review
+## Latest session: house timer / number-pad review
+
+Reviewed clean feature commit 5eec8bc and number-pad addition in 26c4b89. Source approved with no new actionable defects; F05 corrected in Claude's local report. Timer is server-owned, expiry runs before catch progress, cleanup invalidates pending respawns/aims, and carry-over restarts at zero. Studio expiry/reset hooks remain server-only. New 12-file manifest: docs/gate1-timer-review-hashes.json; earlier manifest retained as historical.
+
+Independent validator, whitespace and Rojo packaging checks passed. No new gameplay tests executed. Claude's scripted timer regressions and injected catches are builder-reported; manual PC/focus/controller/phone passes are relayed without logs/device/source identity. Recorded those limits in the canonical test plan rather than fabricating PASS rows. Timer tests now runnable; Gate 1 requires logged evidence on the timer build plus two-client checks. No src/ edits, game-source push or merge.
+
+## Previous session: acceptance-prep review
 
 Confirmed 11/11 source files still match the approved hash manifest; no code delta to re-review. Source approval stands. Inspected Claude's new injected-keyboard 10/10 and crate/wall LOS report as supplementary builder evidence, not independently executed or real-device/co-op acceptance. Flagged F05: a mid-catch joiner who contributes is eligible for credit; the handoff's blanket no-credit expectation is wrong. Canonical test plan corrected; Claude should correct its report and stale Untested bullets.
 

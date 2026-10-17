@@ -13,6 +13,24 @@ Checklist applied: server authority, request validation, exploits, round cleanup
 Verdict: approve / approve with fixes / request changes.
 
 ## Findings
+### House timer and number-pad review — 2026-10-17
+
+Reviewed committed feature snapshot **5eec8bc**, including 26c4b89 (previous fixes and number-pad bindings). Working tree was clean. Verdict: **approve in source; Gate 1 acceptance remains open**. No new actionable finding. F05 is corrected in Claude's local committed report: observers get no credit, contributors present at completion get one credit, no retroactive credit.
+
+All eight review areas applied to the new delta:
+
+- Authority/validation/exploits: timer deadlines, run state, carry-over and restart are server-owned. No new client request was added. DebugExpireRun and reset remain Studio-only BindableFunctions in ServerStorage. Number-pad bindings use the existing validated bait remote.
+- Cleanup/timeout: Main calls HouseService.step before ghost/jar steps. Expiry captures uncaught rows, clears aims/catches/bait and invalidates respawn generation, then enters intermission. Restart clears again before spawning carry-over or the next cycle row. Expired progress does not award a catch in the inspected path.
+- Config/data: duration resolves house.timerConfigKey through Config; intermission and warning thresholds are centralized. One physical room remains the Gate 1 exception; carry-over retains species and physical room, not previous catch progress.
+- Touch/mobile/performance: clock renders existing server-owned attributes, with no new network request per frame. Number-pad bindings are scoped to the three bait items. Clock layout/touch usability and co-op remain device/runtime checks.
+- Scope: timer now implements the design's timeout path; no art, pets, saves or monetization added. The user's timer choice is relayed in Claude's handoff; this review does not independently attest to another conversation.
+
+Independent checks: Python validator PASS; timer commit diff whitespace PASS; Rojo 7.7.1 packaging PASS. New manifest docs/gate1-timer-review-hashes.json captures all 12 source/project files at this commit. The older fixes manifest is retained as historical evidence.
+
+Claude reports scripted expiry at 0.54/0.92 progress without credit, carry-over at zero, pending-respawn cancellation after a catch, a natural 12-second run (Config restored to 480), and post-change injected catches 3/3. These were inspected as builder-reported results, not independently rerun. The local report relays Joseph's manual PC/focus/controller/phone passes without raw logs, device details or source identity; those cannot establish acceptance of the new timer build. Canonical test plan records the limited evidence and makes expiry tests runnable.
+
+No src/ edits, gameplay mutations, feature push or merge by Codex. Feature source is committed locally; only review/support documentation is published on main. Next: logged manual evidence on the reviewed snapshot, two-client fill/reward/leave/join/timeout checks, and verify/save the current synced place.
+
 ### Acceptance-prep review — 2026-10-17
 
 Independent source identity check: **11/11 approved hashes match** the current uncommitted working tree. No new code delta since the approved snapshot; source approval stands. Reviewed Claude's new acceptance-prep notes, not a new live playtest. Injected-keyboard streak (10/10) and crate/wall LOS results are builder-reported supplementary evidence, not real PC/phone or co-op acceptance. The interrupted earlier run is correctly marked void.
