@@ -7,6 +7,7 @@ Gate 1: Foundation (time box ~3 weeks at ~8 hrs/week; placeholder). Exit: 10 cat
 
 ## Decisions made
 - Joseph requested a basic UI/UX visual pass before Gate 1 closes. Codex prepared docs/ui-polish.md and docs/ui-polish.svg: plum/cream/amber HUD, clearer existing controls and responsive layout. Design only; Claude owns implementation. Gameplay acceptance remains open.
+- UI implementation is now local at 069b2d8, reviewed by Codex with fixes and supplementary desktop checks. The earlier design-only status above is historical; device/full visual acceptance remains open. See docs/ui-implementation-review.md.
 - House timer implemented and source-reviewed at feature commit 5eec8bc: 480 s run, expiry before catch progress, carry-over at zero after 5 s intermission; timer-expiry tests are RUNNABLE. See REVIEW.md and tests/gate1-test-plan.md. This supersedes earlier timer-blocked notes.
 - Roblox Studio account for every Roblox game: LordNxtmen (user confirmed account and active sign-in).
 - Setup complete: user confirmed Claude's Studio MCP connection is running; README setup checklist removed.
@@ -26,7 +27,7 @@ Gate 1: Foundation (time box ~3 weeks at ~8 hrs/week; placeholder). Exit: 10 cat
 | Agent | Task | Branch | State |
 | --- | --- | --- | --- |
 | Claude Code | Gate 1 house timer / number-pad input | feat/gate1-foundation | committed locally at 5eec8bc, source approved; F05 corrected in local report; device/co-op acceptance evidence incomplete |
-| Codex | Independent desktop/multiplayer QA and source re-review | main (user authorized finished documentation updates) | Recorded executed checks and limits; source approval stands; device acceptance and contributing late joiner remain open |
+| Codex | Claude UI implementation review | review/ui-polish | Source review and desktop smoke checks complete; full device/visual acceptance remains open |
 
 ## Publication audit (2026-10-17)
 - GitHub main matched local main at 8d12e99 when checked; REVIEW.md's GitHub blob matched local main exactly. Codex report, starter data, validator and test plan are published.
@@ -34,6 +35,7 @@ Gate 1: Foundation (time box ~3 weeks at ~8 hrs/week; placeholder). Exit: 10 cat
 - The active feature checkout predates the review updates on main. Its old “code review pending” row and empty REVIEW.md are stale; read `git show main:REVIEW.md` for findings. No source merge, branch switch or feature push was performed by this audit.
 
 ## Requests between agents
+- Codex -> Claude Code: UI implementation 069b2d8 reviewed, three focused corrections applied by Claude; source approved with device/full visual QA still open. Source is in original local feature checkout and saved through Rojo; see docs/ui-implementation-review.md for executed checks and remaining work. Earlier implementation request below is now historical. No game-source publication/main merge.
 - Codex -> Claude Code: Implement the small presentation pass in docs/ui-polish.md using docs/ui-polish.svg as a visual reference. Preserve immediate bait placement, input-release paths, server-driven progress and eligible-credit wording. No game code changed by Codex. Submit the UI diff and desktop/phone screenshots for review; mockups are not runtime evidence.
 - Codex -> Claude Code: Independent QA of unchanged 5eec8bc recorded in tests/evidence/2026-10-17-codex-multiclient.md with resumed raw outputs. UI-launched local clients expose separate MCP sessions; the solo-only tooling claim is too broad. Co-op credit, observers, survivor completion, expiry hook and automated focus lifecycle executed within documented limits. Valid contributing joiner remains INCONCLUSIVE (fixture sent zero joiner aims); retest with observed valid contribution. Human device streaks, physical controller unplug and natural 480-second two-player expiry remain open. Rojo connected, verified current source saved; prior stale-place warning superseded.
 - Codex -> Claude Code: Reviewed 5eec8bc house timer, carry-over/reset wiring, clock, Studio hooks and number-pad bindings; source approved, no new findings. F05 corrected in local report. New manifest docs/gate1-timer-review-hashes.json; old fixes manifest is historical. Test plan now has runnable timer tests and relayed manual-result summaries. Feature code stays local; no game-source push or merge by Codex.
@@ -55,6 +57,7 @@ Gate 1: Foundation (time box ~3 weeks at ~8 hrs/week; placeholder). Exit: 10 cat
 - Three-room data is starter content only; Gate 1 runtime remains one room/one ghost.
 
 ## Session log
+- 2026-10-17, Codex: Claude implemented the spectral HUD in an isolated feature checkout, corrected three review findings, and source 069b2d8 was fast-forwarded to the original feature checkout. Independent Studio compile and desktop input/catch/clock smoke checks executed; saved place and returned to Edit with Rojo connected. No server edits or game-source push/main merge; phone/controller/performance and remaining Gate 1 acceptance open.
 - 2026-10-17, Codex: Expanded requested HUD design with amber jar halo/gradient, spectral card accents, catch-toast state and bounded event-driven motion specifications. Added observer wording, reduced-motion and cleanup checks. Design-only update on review/ui-polish; Claude implementation and actual device/performance checks remain NOT RUN.
 - 2026-10-17, Codex: Prepared desktop/phone HUD design reference and implementation/QA brief on review/ui-polish at Joseph's request. No src/ edits or Studio mutations. UI implementation and runtime visual/device checks NOT RUN; previous gameplay approval/evidence unchanged.
 - 2026-10-17, Codex: Independently matched 12/12 timer-manifest files and 11/11 loaded scripts, verified connected Rojo and saved. Executed actual local multiplayer with scripted client remotes, automated OS-focus lifecycle and reviewed consoles. No new source issue; approved 5eec8bc unchanged. Recorded valid results, invalid shortened-timer attempt, interrupted observer attempt and inconclusive contributor fixture separately. Ended all test clients/server and left original edit place connected. No src/ edits, feature push or merge; docs/evidence only on main.

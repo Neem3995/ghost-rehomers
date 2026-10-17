@@ -13,6 +13,10 @@ Checklist applied: server authority, request validation, exploits, round cleanup
 Verdict: approve / approve with fixes / request changes.
 
 ## Findings
+### Spectral HUD implementation — 2026-10-17
+
+Reviewed Claude Code's local 069b2d8 client-only presentation change against docs/ui-polish.md. UI01 ambiguous display-name receipt, UI02 portrait receipt placement and UI03 transient cleanup were corrected before commit. Source approved; device/complete visual acceptance remains open. Executed Studio compilation, desktop HUD inspection, injected F held/released styling, actual scripted Hush catch 0→1 with Perfect receipt, spark cleanup and intermission clock smoke checks. See docs/ui-implementation-review.md for exact observations and limits. No server/shared/network changes; no game-source push or merge to main. Phone, controller, observer/multiplayer, long-text and performance checks remain unexecuted. Gate 1 stays open.
+
 ### Independent desktop/multiplayer QA — 2026-10-17
 
 Claude's source remains 5eec8bc, matching the 12-file timer manifest. No new source delta or actionable source defect found. Source approval stands. Independently executed local server/client checks are recorded in tests/evidence/2026-10-17-codex-multiclient.md; they are scripted/injected runtime evidence, not human PC/phone acceptance.

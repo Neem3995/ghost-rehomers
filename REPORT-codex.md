@@ -1,5 +1,9 @@
 # Codex report — 2026-10-17
 
+## Latest session: Claude UI implementation and independent review
+
+Delegated the authorized design implementation to installed Claude Code in isolated feat/ui-polish. Reviewed client-only code and requested three fixes (receipt identity fallback, portrait placement, cleanup); Claude applied them. Reviewed commit 069b2d8 and fast-forwarded source into the existing local feature checkout without touching dirty reports/status. Rojo packaging/data validation/Studio compilation and supplementary desktop runtime checks passed within docs/ui-implementation-review.md limits. Saved current connected place and ended Play mode. No source push/main merge. Real device, full visual-state and performance acceptance remain open.
+
 ## Latest session: independent desktop and multiplayer QA
 
 Saved the connected, verified timer build; independently checked 12/12 manifest hashes and 11/11 loaded script checksums. Launched actual Studio Server & Clients via UI and exercised real client remotes with scripted aiming/positioning. Evidence: tests/evidence/2026-10-17-codex-multiclient.md and 2026-10-17-codex-resume-final.json. Valid contributing late-joiner credit remains INCONCLUSIVE: the fixture delivered zero joiner aim requests. Default natural 480-second two-player expiry remains unverified independently.
