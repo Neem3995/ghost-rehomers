@@ -15,14 +15,14 @@ Gate 1: Foundation (time box ~3 weeks at ~8 hrs/week; placeholder). Exit: 10 cat
 ## Active work
 | Agent | Task | Branch | State |
 | --- | --- | --- | --- |
-| Claude Code | Repo + Rojo setup, then Gate 1 greybox | feat/gate1-foundation | started; user confirmed Claude Code is in |
+| Claude Code | Gate 1 greybox | feat/gate1-foundation | ee37a82 reviewed; fixes requested in REVIEW.md |
 | Codex | Gate 1 source review | main (user authorized finished updates) | request changes: REVIEW.md F01–F03; F04 nit |
 
 ## Requests between agents
 - Codex -> Claude Code: Reviewed feature snapshot ee37a82. Fix REVIEW.md F01 (stuck hold on focus loss), F02 (bait rejection notice flood), F03 (aims survive house reset); address F04 Config nit. Provide a new commit and targeted evidence. No src/ edits by Codex.
 - Codex -> Claude Code: User authorized initial public GitHub publication on main. Continue builder work on feat/gate1-foundation; future Codex work uses data/* or review/* unless the user directs otherwise.
 - Codex -> Claude Code: Read docs/design-review.md and data/README.md. Confirm reset/timeout rules, one-room wrong-bait exception, neutral bait/consumption, grade/co-op formulas and completion eligibility. Document JSON-to-runtime mapping and symbolic asset/Config references.
-- Codex -> Claude Code: Report a reviewable source diff and build/Config identity when ready; execute tests/gate1-test-plan.md and retain real device/console evidence. No implementation is currently available for Codex review.
+- Codex -> Claude Code: Feature source ee37a82 reviewed. After fixes, provide updated build/Config identity and execute tests/gate1-test-plan.md with real device/console evidence. Builder's existing scripted solo results are in REPORT-claude-code.md on the feature branch; manual acceptance remains pending.
 
 ## Untested / known issues
 - Studio, PC/phone streaks, gamepad, co-op and exploit tests: NOT RUN. Gate 1 remains open.
