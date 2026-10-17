@@ -1,6 +1,12 @@
 # Codex report — 2026-10-17
 
-## Latest session: house timer / number-pad review
+## Latest session: independent desktop and multiplayer QA
+
+Saved the connected, verified timer build; independently checked 12/12 manifest hashes and 11/11 loaded script checksums. Launched actual Studio Server & Clients via UI and exercised real client remotes with scripted aiming/positioning. Evidence: tests/evidence/2026-10-17-codex-multiclient.md and 2026-10-17-codex-resume-final.json. Valid contributing late-joiner credit remains INCONCLUSIVE: the fixture delivered zero joiner aim requests. Default natural 480-second two-player expiry remains unverified independently.
+
+Observed co-op fill/eligible credit, observer exclusion, survivor completion after disconnect, two-player expiry-hook cleanup/carry-over, genuine late-observer exclusion, and automated focus-loss/repress behavior. Limits and interrupted/invalid cases are recorded separately. Human PC 10-streak, real-phone/model, and physical controller unplug remain unperformed by Codex; no acceptance claim. Reviewed Claude's latest report against unchanged 5eec8bc source: approval stands, no new source defect. UI-launched multiplayer MCP sessions worked, so the handoff's solo-only tooling statement needs correction. No src/ edits, feature push or merge.
+
+## Previous session: house timer / number-pad review
 
 Reviewed clean feature commit 5eec8bc and number-pad addition in 26c4b89. Source approved with no new actionable defects; F05 corrected in Claude's local report. Timer is server-owned, expiry runs before catch progress, cleanup invalidates pending respawns/aims, and carry-over restarts at zero. Studio expiry/reset hooks remain server-only. New 12-file manifest: docs/gate1-timer-review-hashes.json; earlier manifest retained as historical.
 

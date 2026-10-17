@@ -13,6 +13,16 @@ Checklist applied: server authority, request validation, exploits, round cleanup
 Verdict: approve / approve with fixes / request changes.
 
 ## Findings
+### Independent desktop/multiplayer QA — 2026-10-17
+
+Claude's source remains 5eec8bc, matching the 12-file timer manifest. No new source delta or actionable source defect found. Source approval stands. Independently executed local server/client checks are recorded in tests/evidence/2026-10-17-codex-multiclient.md; they are scripted/injected runtime evidence, not human PC/phone acceptance.
+
+Confirmed connected Rojo, all 11 loaded scripts matching local checksums, and saved the current place (the earlier stale-place warning is superseded). Actual two-player sessions verified co-op fill consistent with the configured bonus, exactly-once eligible credit, exclusion of an observer, survivor completion after a disconnect requested at half fill, and no award/carry-over reset through the two-player expiry hook. Completed a genuine late-observer case in the resumed session and an automated OS-focus lifecycle check. The normal 480-second deadline was not independently established by the expiry-hook test; an ineffective shortened-config attempt is explicitly INVALID in the evidence.
+
+Review of Claude's newest handoff: evidence types are accurately separated. The statement that Studio MCP is inherently solo-only was too broad: Studio UI can launch local clients, which then expose separate MCP sessions. Use the documented UI route for future multiplayer QA. No core implementation correction requested on that basis.
+
+Gate 1 remains open: human PC/phone streaks and physical controller unplug cannot be completed by this desktop automation. Valid contributing late-joiner credit remains INCONCLUSIVE: the retry delivered zero joiner aims and therefore did not test that reward path. Keep unexecuted and interrupted cases explicit; no per-catch manual PASS rows invented. No src/ edits, feature push or merge by Codex.
+
 ### House timer and number-pad review — 2026-10-17
 
 Reviewed committed feature snapshot **5eec8bc**, including 26c4b89 (previous fixes and number-pad bindings). Working tree was clean. Verdict: **approve in source; Gate 1 acceptance remains open**. No new actionable finding. F05 is corrected in Claude's local committed report: observers get no credit, contributors present at completion get one credit, no retroactive credit.

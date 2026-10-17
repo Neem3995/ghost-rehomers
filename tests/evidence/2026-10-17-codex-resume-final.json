@@ -1,0 +1,128 @@
+{
+  "build": "5eec8bc",
+  "kind": "executed Studio outputs; automated input, no human device acceptance",
+  "results": [
+    {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"phase\":\"unfocused\",\"releases\":0,\"aims\":0,\"total\":243}"
+        }
+      ],
+      "isError": false
+    },
+    {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"phase\":\"refocused-no-new-press\",\"releasesTotal\":2,\"aims\":0}"
+        }
+      ],
+      "isError": false
+    },
+    {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"phase\":\"fresh-press\",\"aims\":9}"
+        }
+      ],
+      "isError": false
+    },
+    {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"before\":{\"progress\":0.62,\"p3\":0,\"p1\":0},\"p3After\":0,\"join\":{\"1\":{\"at\":273.8577332999994,\"state\":\"Curious\",\"name\":\"Player3\",\"progress\":0}},\"progress\":1,\"completed\":true,\"p1After\":1,\"case\":\"late-observer-completion\"}"
+        }
+      ],
+      "isError": false
+    },
+    {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"joins\":{\"1\":{\"at\":273.8577332999994,\"state\":\"Curious\",\"name\":\"Player3\",\"progress\":0},\"2\":{\"at\":385.5667534000022,\"state\":\"Curious\",\"name\":\"Player4\",\"progress\":0.14}},\"p4\":0,\"progress\":0,\"p1\":1,\"completed\":false,\"case\":\"late-contributor\"}"
+        }
+      ],
+      "isError": false
+    },
+    {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"catches\":0,\"receipts\":0,\"case\":\"late-contributor-receipt\"}"
+        }
+      ],
+      "isError": false
+    },
+    {
+      "case": "bounded-relure-retry",
+      "results": [
+        {
+          "status": "fulfilled",
+          "value": {
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"sent\":56,\"name\":\"Player1\",\"catches\":2}"
+              }
+            ],
+            "isError": false
+          }
+        },
+        {
+          "status": "fulfilled",
+          "value": {
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"sent\":0,\"name\":\"Player4\",\"catches\":0}"
+              }
+            ],
+            "isError": false
+          }
+        },
+        {
+          "status": "fulfilled",
+          "value": {
+            "content": [
+              {
+                "type": "text",
+                "text": "{\"joins\":{\"1\":{\"at\":273.8577332999994,\"state\":\"Curious\",\"name\":\"Player3\",\"progress\":0},\"2\":{\"at\":385.5667534000022,\"state\":\"Curious\",\"name\":\"Player4\",\"progress\":0.14}},\"case\":\"late-contributor-relure-retry\",\"p4\":0,\"p1\":2}"
+              }
+            ],
+            "isError": false
+          }
+        }
+      ]
+    },
+    {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"catches\":0,\"player\":\"Player4\",\"run\":\"Running\",\"ghosts\":{\"1\":{\"progress\":0,\"name\":\"wick\",\"state\":\"Drifting\"}}}"
+        }
+      ],
+      "isError": false
+    }
+  ],
+  "serverConsole": {
+    "content": [
+      {
+        "type": "text",
+        "text": "[Ghost] Hush:  -> Drifting\n[House] run started (480 s), carried over: none\nContentId: rbxassetid://203785492 failed due to: Asset type does not match requested type\n[Ghost] Hush: Drifting -> Caught\n[Ghost] Hush:  -> Drifting\n[House] run started (480 s), carried over: none\n[Ghost] Hush: Drifting -> Curious\n[Ghost] Hush: Curious -> Drifting\n[Ghost] Hush: Drifting -> Caught\n[Ghost] Hush:  -> Drifting\n[House] run started (480 s), carried over: none\n[Ghost] Hush: Drifting -> Curious\n[Ghost] Hush: Curious -> Caught\n[Catch] Hush (Common) grade=Great players=Player1\n[Ghost] Wick:  -> Drifting\n[Ghost] Wick: Drifting -> Caught\n[Ghost] Hush:  -> Drifting\n[House] run started (480 s), carried over: none\n[Ghost] Hush: Drifting -> Curious\n[Ghost] Hush: Curious -> Drifting\n[Ghost] Hush: Drifting -> Curious\n[Ghost] Hush: Curious -> Caught\n[Catch] Hush (Common) grade=Perfect players=Player1\n[Ghost] Wick:  -> Drifting"
+      }
+    ],
+    "isError": false
+  },
+  "client4Console": {
+    "content": [
+      {
+        "type": "text",
+        "text": "[Roblox][CorePackages.Packages._Index.UIBlox.UIBlox.Logger] [UIBlox - Warning] - FoundationProvider not found. Please ensure that the FoundationProvider is present in the component tree.\nCorePackages.Packages._Index.UIBlox.UIBlox.App.Style.AppStyleProvider:178 function AppStyleProvider\nCorePackages.Packages._Index.ReactReconciler.ReactReconciler.ReactFiberHooks.new:3196 function renderWithHooks\nCorePackages.Packages._Index.ReactReconciler.ReactReconciler.ReactFiberBeginWork.new:209 function renderWithHooks\nCorePackages.Packages._Index.ReactReconciler.ReactReconciler.ReactFiberBeginWork.new:1577 function mountIndeterminateComponent\nCorePackages.Packages._Index.ReactReconciler.ReactReconciler.ReactFiberBeginWork.new:3485 function beginWork\nCorePackages.Packages._Index.ReactReconciler.ReactReconciler.ReactFiberWorkLoop.new:255\nCorePackages.Packages._Index.ReactReconciler.ReactReconciler.ReactFiberWorkLoop.new:1977\nCorePackages.Packages._Index.ReactReconciler.ReactReconciler.ReactFiberWorkLoop.new:1953\nCorePackages.Packages._Index.ReactReconciler.ReactReconciler.ReactFiberWorkLoop.new:1896\nCorePackages.Packages._Index.ReactReconciler.ReactReconciler.ReactFiberWorkLoop.new:915\nCorePackages.Packages._Index.ReactReconciler.ReactReconciler.ReactFiberWorkLoop.new:860\nCorePackages.Packages._Index.Scheduler.Scheduler.Scheduler:320\nCorePackages.Packages._Index.Scheduler.Scheduler.Scheduler:268\nCorePackages.Packages._Index.Scheduler.Scheduler.forks.SchedulerHostConfig.default:260 function doWork\nCorePackages.Packages._Index.Scheduler.Scheduler.forks.SchedulerHostConfig.default:296 function performWorkUntilDeadline\n\n[Roblox][CorePackages.Packages._Index.UIBlox.UIBlox.Logger] [UIBlox - Warning] - FoundationProvider not found. Please ensure that the FoundationProvider is present in the component tree.\nCorePackages.Packages._Index.UIBlox.UIBlox.App.Style.AppStyleProvider:178 function AppStyleProvider\nCorePackages.Packages._Index.ReactReconciler.ReactReconciler.ReactFiberHooks.new:3196 function renderWithHooks\nCorePackages.Packages._Index.ReactReconciler.ReactReconciler.ReactFiberBeginWork.new:209 function renderWithHooks\nCorePackages.Packages._Index.ReactReconciler.ReactReconciler.ReactFiberBeginWork.new:1577 function mountIndeterminateComponent\nCorePackages.Packages._Index.ReactReconciler.ReactReconciler.ReactFiberBeginWork.new:3485 function beginWork\nCorePackages.Packages._Index.ReactReconciler.ReactReconciler.ReactFiberWorkLoop.new:255\nCorePackages.Packages._Index.ReactReconciler.ReactReconciler.ReactFiberWorkLoop.new:1977\nCorePackages.Packages._Index.ReactReconciler.ReactReconciler.ReactFiberWorkLoop.new:1953\nCorePackages.Packages._Index.ReactReconciler.ReactReconciler.ReactFiberWorkLoop.new:1896\nCorePackages.Packages._Index.ReactReconciler.ReactReconciler.ReactFiberWorkLoop.new:915\nCorePackages.Packages._Index.ReactReconciler.ReactReconciler.ReactFiberWorkLoop.new:860\nCorePackages.Packages._Index.Scheduler.Scheduler.Scheduler:320\nCorePackages.Packages._Index.Scheduler.Scheduler.Scheduler:268\nCorePackages.Packages._Index.Scheduler.Scheduler.forks.SchedulerHostConfig.default:260 function doWork\nCorePackages.Packages._Index.Scheduler.Scheduler.forks.SchedulerHostConfig.default:296 function performWorkUntilDeadline\n\n[Roblox][CorePackages.Packages._Index.UIBlox.UIBlox.Logger] [UIBlox - Warning] - FoundationProvider not found. Please ensure that the FoundationProvider is present in the component tree.\nCorePackages.Packages._Index.UIBlox.UIBlox.App.Style.AppStyleProvider:178 function AppStyleProvider\nCorePackages.Packages._Index.ReactReconciler.ReactReconciler.ReactFiberHooks.new:3196 function renderWithHooks\nCorePackages.Packages._Index.ReactReconciler.ReactReconciler.ReactFiberBeginWork.new:209 function renderWithHooks\nCorePackages.Packages._Index.ReactReconciler.ReactReconciler.ReactFiberBeginWork.new:1577 function mountIndeterminateComponent\nCorePackages.Packages._Index.ReactReconciler.ReactReconciler.ReactFiberBeginWork.new:3485 function beginWork\nCorePackages.Packages._Index.ReactReconciler.ReactReconciler.ReactFiberWorkLoop.new:255\nCorePackages.Packages._Index.ReactReconciler.ReactReconciler.ReactFiberWorkLoop.new:1977\nCorePackages.Packages._Index.ReactReconciler.ReactReconciler.ReactFiberWorkLoop.new:1953\nCorePackages.Packages._Index.ReactReconciler.ReactReconciler.ReactFiberWorkLoop.new:1896\nCorePackages.Packages._Index.ReactReconciler.ReactReconciler.ReactFiberWorkLoop.new:915\nCorePackages.Packages._Index.ReactReconciler.ReactReconciler.ReactFiberWorkLoop.new:860\nCorePackages.Packages._Index.Scheduler.Scheduler.Scheduler:320\nCorePackages.Packages._Index.Scheduler.Scheduler.Scheduler:268\nCorePackages.Packages._Index.Scheduler.Scheduler.forks.SchedulerHostConfig.default:260 function doWork\nCorePackages.Packages._Index.Scheduler.Scheduler.forks.SchedulerHostConfig.default:296 function performWorkUntilDeadline\n\n[Roblox][CorePackages.Packages._Index.UIBlox.UIBlox.Logger] [UIBlox - Warning] - FoundationProvider not found. Please ensure that the FoundationProvider is present in the component tree.\nCorePackages.Packages._Index.UIBlox.UIBlox.App.Style.AppStyleProvider:178 function AppStyleProvider\nCorePackages.Packages._Index.ReactReconciler.ReactReconciler.ReactFiberHooks.new:3196 function renderWithHooks\nCorePackages.Packages._Index.ReactReconciler.ReactReconciler.ReactFiberBeginWork.new:209 function renderWithHooks\nCorePackages.Packages._Index.ReactReconciler.ReactReconciler.ReactFiberBeginWork.new:1577 function mountIndeterminateComponent\nCorePackages.Packages._Index.ReactReconciler.ReactReconciler.ReactFiberBeginWork.new:3485 function beginWork\nCorePackages.Packages._Index.ReactReconciler.ReactReconciler.ReactFiberWorkLoop.new:255\nCorePackages.Packages._Index.ReactReconciler.ReactReconciler.ReactFiberWorkLoop.new:1977\nCorePackages.Packages._Index.ReactReconciler.ReactReconciler.ReactFiberWorkLoop.new:1953\nCorePackages.Packages._Index.ReactReconciler.ReactReconciler.ReactFiberWorkLoop.new:1896\nCorePackages.Packages._Index.ReactReconciler.ReactReconciler.ReactFiberWorkLoop.new:915\nCorePackages.Packages._Index.ReactReconciler.ReactReconciler.ReactFiberWorkLoop.new:860\nCorePackages.Packages._Index.Scheduler.Scheduler.Scheduler:320\nCorePackages.Packages._Index.Scheduler.Scheduler.Scheduler:268\nCorePackages.Packages._Index.Scheduler.Scheduler.forks.SchedulerHostConfig.default:260 function doWork\nCorePackages.Packages._Index.Scheduler.Scheduler.forks.SchedulerHostConfig.default:296 function performWorkUntilDeadline\n\nContentId: rbxassetid://203785492 failed due to: Asset type does not match requested type\n[Roblox][CorePackages.Packages._Index.UIBlox.UIBlox.Logger] [UIBlox - Warning] - FoundationProvider not found. Please ensure that the FoundationProvider is present in the component tree.\nCorePackages.Packages._Index.UIBlox.UIBlox.App.Style.AppStyleProvider:178 function AppStyleProvider\nCorePackages.Packages._Index.ReactReconciler.ReactReconciler.ReactFiberHooks.new:3196 function renderWithHooks\nCorePackages.Packages._Index.ReactReconciler.ReactReconciler.ReactFiberBeginWork.new:209 function renderWithHooks\nCorePackages.Packages._Index.ReactReconciler.ReactReconciler.ReactFiberBeginWork.new:1577 function mountIndeterminateComponent\nCorePackages.Packages._Index.ReactReconciler.ReactReconciler.ReactFiberBeginWork.new:3485 function beginWork\nCorePackages.Packages._Index.ReactReconciler.ReactReconciler.ReactFiberWorkLoop.new:255\nCorePackages.Packages._Index.ReactReconciler.ReactReconciler.ReactFiberWorkLoop.new:1977\nCorePackages.Packages._Index.ReactReconciler.ReactReconciler.ReactFiberWorkLoop.new:1953\nCorePackages.Packages._Index.ReactReconciler.ReactReconciler.ReactFiberWorkLoop.new:1896\nCorePackages.Packages._Index.ReactReconciler.ReactReconciler.ReactFiberWorkLoop.new:915\nCorePackages.Packages._Index.ReactReconciler.ReactReconciler.ReactFiberWorkLoop.new:860\nCorePackages.Packages._Index.Scheduler.Scheduler.Scheduler:320\nCorePackages.Packages._Index.Scheduler.Scheduler.Scheduler:268\nCorePackages.Packages._Index.Scheduler.Scheduler.forks.SchedulerHostConfig.default:260 function doWork\nCorePackages.Packages._Index.Scheduler.Scheduler.forks.SchedulerHostConfig.default:296 function performWorkUntilDeadline\n"
+      }
+    ],
+    "isError": false
+  }
+}

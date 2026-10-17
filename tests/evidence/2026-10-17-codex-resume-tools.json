@@ -1,0 +1,33 @@
+{
+  "build": "5eec8bc",
+  "kind": "executed Studio tool outputs; automated input, not human device acceptance",
+  "results": [
+    {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"phase\":\"unfocused\",\"releases\":0,\"aims\":0,\"total\":243}"
+        }
+      ],
+      "isError": false
+    },
+    {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"phase\":\"refocused-no-new-press\",\"releasesTotal\":2,\"aims\":0}"
+        }
+      ],
+      "isError": false
+    },
+    {
+      "content": [
+        {
+          "type": "text",
+          "text": "{\"phase\":\"fresh-press\",\"aims\":9}"
+        }
+      ],
+      "isError": false
+    }
+  ]
+}

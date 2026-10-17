@@ -1,6 +1,6 @@
 # Gate 1 manual acceptance plan
 
-Status: manual acceptance evidence INCOMPLETE. Claude relays manual PC/focus/controller/phone PASS reports without logs or source identity (see summary below). Two-client tests remain NOT RUN. House timer is implemented in feature commit 5eec8bc and expiry tests are now RUNNABLE; no timer waiver is assumed. Data validation and injected-input runs do not establish gameplay acceptance.
+Status: manual acceptance evidence INCOMPLETE. Claude relays manual PC/focus/controller/phone PASS reports without logs or source identity (see summary below). Codex independently executed supplementary multiplayer and focus checks on 5eec8bc; see tests/evidence/2026-10-17-codex-multiclient.md. Co-op credit, observer exclusion, survivor completion and expiry-hook cleanup passed within the stated limits. Valid contributing late-joiner credit remains INCONCLUSIVE because the fixture delivered zero joiner aim requests. Human PC/phone streaks, physical controller unplug and the default natural 480-second two-player deadline remain unverified by Codex. No timer waiver is assumed; injected/scripted runs do not establish manual acceptance.
 
 ## Reported evidence (not completed per-device logs)
 
@@ -9,7 +9,7 @@ Status: manual acceptance evidence INCOMPLETE. Claude relays manual PC/focus/con
 | Claude's committed report at 5eec8bc, relaying Joseph's 2026-10-17 feedback | PC streak, focus loss, controller and real phone reported PASS / working | No direct report in this Codex session, device details, per-catch rows, Output captures or precise source identity. Preserve as relayed results; do not fabricate 20 PASS rows. Record fresh logged runs on the timer build for acceptance. |
 | Claude's Studio scripted timer report | Expiry at 0.54/0.92 progress: no catch/credit; zero-progress carry-over; respawn cancelled; shortened natural run/intermission restarted | Builder-reported, not independently rerun; default 480-second and real-device/two-client expiry checks remain pending. |
 | Claude's injected number-pad and post-timer regression report | 3/3 catches for each reported regression | Supplementary tool input, not manual PC/phone acceptance. |
-| Two-client fill, rewards, leave, join and expiry | NOT RUN | Use a real two-client session and retain separate client/server evidence. |
+| Codex independent Studio server/client QA on 5eec8bc | Executed fill/credit, observers, partial-fill disconnect, expiry hook and automated OS-focus lifecycle | Real local clients with scripted positioning/aiming. Late contributor INCONCLUSIVE; natural 480-second deadline and human/device tests remain open. Exact observations and raw resumed outputs are in tests/evidence/. |
 
 Gate 1 cannot close from these summaries alone: the existing protocol requires identifiable runs and per-catch evidence. Use the template below for fresh manual runs; record the exact tested commit/Config. Earlier passes are not discarded, but they do not certify later timer/input changes.
 
