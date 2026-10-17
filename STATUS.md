@@ -6,7 +6,8 @@ Both agents read this at the start of a session and update it at the end. Keep i
 Gate 1: Foundation (time box ~3 weeks at ~8 hrs/week; placeholder). Exit: 10 catches in a row on phone and PC, no stuck states.
 
 ## Decisions made
-- Roblox Studio account for every Roblox game: LordNxtmen (user confirmed; current Studio sign-in unverified).
+- Roblox Studio account for every Roblox game: LordNxtmen (user confirmed account and active sign-in).
+- Setup complete: user confirmed Claude's Studio MCP connection is running; README setup checklist removed.
 - Game: Ghost Rehomers (name not yet searched on Roblox).
 - Catch style: setup-based (lure, then hold the jar light). Open for review at Gate 2.
 - Gate 2 twist: not chosen yet (Disguise / Tough ghosts / Time of night).
@@ -28,6 +29,7 @@ Gate 1: Foundation (time box ~3 weeks at ~8 hrs/week; placeholder). Exit: 10 cat
 - Three-room data is starter content only; Gate 1 runtime remains one room/one ghost.
 
 ## Session log
+- 2026-10-17, Codex: User confirmed Studio sign-in as LordNxtmen and Claude's Studio MCP connection are done and running. Removed the completed README setup checklist. This confirms setup only; Gate 1 gameplay acceptance remains open.
 - 2026-10-17, Codex: User confirmed Claude Code is in and Rojo is installed. Removed Claude folder/start checklist item; Studio account sign-in and Claude MCP verification remain pending. Builder feature checkout left untouched.
 - 2026-10-17, Codex: Recorded LordNxtmen as the intended Studio account for all Roblox games; README sign-in verification remains pending.
 - 2026-10-17, Codex: Removed verified README setup steps: Rojo 7.7.1/Git 2.53.0 installed, saved project place open in Studio, Codex Studio MCP connected, Codex folder/prompt complete. Remaining checklist covers intended Studio account and Claude folder/prompt/MCP verification; remove section after those are confirmed. Builder's untracked source/config left untouched.
