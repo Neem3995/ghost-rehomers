@@ -1,11 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1280" height="1140" viewBox="0 0 1280 1140">
 <defs>
+ <radialGradient id="amberHalo"><stop stop-color="#f5cb7a" stop-opacity=".34"/><stop offset="1" stop-color="#f5cb7a" stop-opacity="0"/></radialGradient>
+ <linearGradient id="gold" x2="1" y2="1"><stop stop-color="#fff0b6"/><stop offset="1" stop-color="#df9a4b"/></linearGradient>
+ <linearGradient id="spectral" x2="1" y2="0"><stop stop-color="#ace2c5"/><stop offset="1" stop-color="#b9a8ff"/></linearGradient>
  <linearGradient id="room" x2="0" y2="1"><stop stop-color="#4d435f"/><stop offset="1" stop-color="#282536"/></linearGradient>
  <style>text{font-family:Segoe UI,Arial,sans-serif;fill:#fff4dc}.muted{fill:#c6bed3}.small{font-size:14px}.label{font-size:12px;letter-spacing:2px}.card{fill:#211e30;stroke:#625871}.bait{fill:#302b42;stroke:#625871}.mint{fill:#ace2c5}.ink{fill:#211e30}</style>
  <g id="ghost"><path d="M-39 25V-12a39 39 0 0 1 78 0v37l-13-9-13 9-13-9-13 9-13-9z" fill="#efefff"/><ellipse cx="-13" cy="-11" rx="4" ry="6" fill="#40394d"/><ellipse cx="13" cy="-11" rx="4" ry="6" fill="#40394d"/><path d="M-8 5q8 9 16 0" fill="none" stroke="#40394d" stroke-width="3"/></g>
 </defs>
 <rect width="1280" height="1140" fill="#14121d"/>
-<text x="40" y="43" font-size="25" font-weight="700">Ghost Rehomers · Basic HUD polish</text>
+<text x="40" y="43" font-size="25" font-weight="700">Ghost Rehomers · The spectral field kit</text>
 <text x="40" y="70" class="muted small">DESIGN REFERENCE · not a game screenshot · existing catch loop, clearer presentation</text>
 <!-- Desktop composition -->
 <rect x="40" y="94" width="1200" height="610" rx="18" fill="url(#room)"/>
@@ -30,7 +33,9 @@
  <rect x="18" y="98" width="262" height="12" rx="6" fill="#433c53"/><rect x="18" y="98" width="163" height="12" rx="6" fill="#ace2c5"/>
 </g>
 <circle cx="640" cy="417" r="4" fill="#fff4dc"/>
-<circle cx="1148" cy="473" r="58" fill="#f5cb7a" stroke="#fff4dc" stroke-width="2"/>
+<circle cx="1148" cy="473" r="91" fill="url(#amberHalo)"/>
+<circle cx="1148" cy="473" r="66" fill="none" stroke="#f5cb7a" stroke-opacity=".45" stroke-width="2"/>
+<circle cx="1148" cy="473" r="58" fill="url(#gold)" stroke="#fff4dc" stroke-width="2"/>
 <text x="1148" y="462" text-anchor="middle" class="ink label">HOLD</text><text x="1148" y="490" text-anchor="middle" class="ink" font-size="25" font-weight="700">JAR</text><text x="1148" y="552" text-anchor="middle" class="small">F / left mouse</text>
 <rect x="423" y="648" width="434" height="34" rx="12" class="card"/><text x="640" y="670" text-anchor="middle" class="small">Aim at the ghost · Hold F or left mouse</text>
 <text x="62" y="683" class="label muted">DESKTOP LAYOUT</text>
@@ -46,11 +51,27 @@
 </g>
 <rect x="361" y="898" width="202" height="56" rx="10" class="card"/><text x="377" y="920" class="small">Hush · Curious</text><rect x="377" y="933" width="170" height="7" rx="3" fill="#433c53"/><rect x="377" y="933" width="106" height="7" rx="3" fill="#ace2c5"/>
 <use href="#ghost" transform="translate(462 997) scale(.6)"/>
-<circle cx="791" cy="958" r="41" fill="#f5cb7a"/><text x="791" y="951" text-anchor="middle" class="ink small">HOLD</text><text x="791" y="974" text-anchor="middle" class="ink" font-size="19" font-weight="700">JAR</text>
+<circle cx="791" cy="958" r="57" fill="url(#amberHalo)"/><circle cx="791" cy="958" r="46" fill="none" stroke="#f5cb7a" stroke-opacity=".5"/><circle cx="791" cy="958" r="41" fill="url(#gold)"/><text x="791" y="951" text-anchor="middle" class="ink small">HOLD</text><text x="791" y="974" text-anchor="middle" class="ink" font-size="19" font-weight="700">JAR</text>
 <circle cx="117" cy="1036" r="38" fill="none" stroke="#92869e" stroke-dasharray="4 5"/><text x="117" y="1041" text-anchor="middle" class="small muted">Move</text>
 <circle cx="806" cy="1055" r="28" fill="none" stroke="#92869e" stroke-dasharray="4 5"/><text x="806" y="1060" text-anchor="middle" class="small muted">Jump</text>
 <text x="462" y="1075" text-anchor="middle" class="small">Aim at the ghost · Hold JAR</text>
-<text x="922" y="824" font-size="17" font-weight="700">First pass</text>
-<text x="922" y="863" class="small muted">Consistent cards</text><text x="922" y="895" class="small muted">Device-specific hints</text><text x="922" y="927" class="small muted">Readable state + progress</text><text x="922" y="959" class="small muted">Safe touch spacing</text><text x="922" y="1005" class="small">Builder: Claude Code</text><text x="922" y="1034" class="small">Design / QA: Codex</text>
+<text x="922" y="824" font-size="17" font-weight="700">More personality</text>
+<text x="922" y="863" class="small muted">Luminous jar control</text><text x="922" y="895" class="small muted">Spectral progress accents</text><text x="922" y="927" class="small muted">Catch celebration card</text><text x="922" y="959" class="small muted">Responsive micro-motion</text><text x="922" y="1005" class="small">Builder: Claude Code</text><text x="922" y="1034" class="small">Design / QA: Codex</text>
+<!-- Presentation accents; example catch toast is a separate UI state. -->
+<rect x="492" y="270" width="296" height="3" rx="1.5" fill="url(#spectral)"/>
+<rect x="509" y="368" width="163" height="12" rx="6" fill="url(#spectral)"/>
+<path d="M535 128h13m-6.5-6.5v13M732 128h13m-6.5-6.5v13" stroke="#f5cb7a" stroke-width="1.5"/>
+<path d="M1121 390l4-8 4 8 8 4-8 4-4 8-4-8-8-4zM1202 419l3-6 3 6 6 3-6 3-3 6-3-6-6-3z" fill="#f5cb7a"/>
+<g transform="translate(72 537)">
+ <text x="0" y="-12" class="label muted">CATCH TOAST · SEPARATE STATE</text>
+ <rect width="348" height="92" rx="16" fill="#211e30" stroke="#f5cb7a"/>
+ <rect width="5" height="92" rx="2.5" fill="url(#gold)"/>
+ <circle cx="46" cy="46" r="29" fill="#3c3340" stroke="#f5cb7a"/>
+ <use href="#ghost" transform="translate(46 49) scale(.42)"/>
+ <text x="91" y="27" class="label" style="fill:#f5cb7a">PERFECT CATCH</text>
+ <text x="91" y="53" font-size="20" font-weight="700">You rehomed Hush!</text>
+ <text x="91" y="76" class="small muted">+1 catch · A little less haunted.</text>
+</g>
+<g fill="none" stroke="#b9a8ff" stroke-width="1.5" opacity=".65"><path d="M460 295v-13h13M807 295v-13h-13M460 382v13h13M807 382v13h-13"/></g>
 <text x="40" y="1126" class="small muted">Mockup only. Phone viewport cropped for composition; platform overlays and physical-device fit still need testing.</text>
 </svg>
