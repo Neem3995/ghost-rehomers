@@ -13,6 +13,18 @@ Checklist applied: server authority, request validation, exploits, round cleanup
 Verdict: approve / approve with fixes / request changes.
 
 ## Findings
+### Acceptance-prep review — 2026-10-17
+
+Independent source identity check: **11/11 approved hashes match** the current uncommitted working tree. No new code delta since the approved snapshot; source approval stands. Reviewed Claude's new acceptance-prep notes, not a new live playtest. Injected-keyboard streak (10/10) and crate/wall LOS results are builder-reported supplementary evidence, not real PC/phone or co-op acceptance. The interrupted earlier run is correctly marked void.
+
+| # | Severity | Location | What goes wrong | Suggested fix | Status |
+| --- | --- | --- | --- | --- | --- |
+| F05 | should-fix | REPORT-claude-code.md, Joseph-run checklist, join-mid-catch bullet (working-tree handoff) | It says a joiner gets no credit for that catch without distinguishing an observer from a contributing joiner. Current rules credit anyone who contributed during the attempt and remains present. Following the checklist could incorrectly fail valid co-op behavior. | Say observer gets no credit; a joiner who contributes before completion gets one credit; nobody gets retroactive credit for a completed catch. Canonical tests/gate1-test-plan.md now states this. | open (builder handoff correction) |
+
+Documentation cleanup: Claude's older “Untested” section still lists crate LOS and the entire input layer as untested, despite newer injected-input/LOS results. Reconcile it with the latest evidence while retaining real-device/focus/gamepad limitations. Do not claim the saved rbxl contains current fixes until checked after saving.
+
+Codex completed the requested per-device log template, split house reset and Curious timeout from house-timer expiry, and marked house-timer expiry BLOCKED pending Joseph's decision. No new gameplay tests needed for these documentation changes. Verdict: source approval unchanged; correct F05 before using the handoff checklist. Gate 1 remains open.
+
 ### Re-review: uncommitted F01–F04 fixes — 2026-10-17
 
 Verdict: **approve the fixes in source; gameplay acceptance remains pending**. No new actionable defect found in the seven changed source files relative to ee37a82. No src/ edits or feature merge by Codex. Review identity is captured in docs/gate1-fix-review-hashes.json; Config SHA256 begins e7d657c6ba0d043a, matching Claude's report. This approval covers those bytes, not future edits or a claimed deployed build.

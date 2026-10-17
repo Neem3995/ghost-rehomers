@@ -1,6 +1,6 @@
 # Gate 1 manual acceptance plan
 
-Status: NOT RUN. This is a proposed acceptance protocol pending builder confirmation of the rules in docs/design-review.md. Data validation does not establish gameplay success.
+Status: manual PC/phone acceptance NOT RUN. Claude reports supplementary Studio injected-input and LOS checks; these do not satisfy the real PC/phone streaks. House-timer expiry is BLOCKED pending Joseph's timer scope decision; no waiver is assumed. Data validation does not establish gameplay success.
 
 ## Setup and evidence
 
@@ -19,7 +19,33 @@ Run this sequence **10 times consecutively on PC, then 10 on the real phone**. U
 5. Release the input. Use the normal reset/rearm path; confirm progress clears and the next ghost returns to a catchable state within the configured limit.
 6. Record console errors, unexpected state, elapsed time and result. A stuck state means normal actions cannot advance within the documented reset/transition limit. Any manual recovery, duplicate completion or unexpected error fails the streak; retain evidence, fix, and restart that device's streak at 1.
 
-Use this log header for 20 rows: `device | catch 1–10 | ghost | bait | grade | completion count | reset time | console evidence | pass/fail | notes`. Do not mark acceptance passed without all rows and evidence.
+Copy the per-device evidence log below once for PC and once for phone. Do not mark acceptance passed without all 20 completed rows and evidence. Injected input, scripted camera/position, Studio emulation and interrupted runs are supplementary only. A void run cannot be stitched to a later run to create a streak.
+
+## Per-device evidence log (copy for each device/session)
+
+- Run ID / date / tester:
+- Device model / OS / screen size / Studio or client version:
+- Input method (human keyboard/mouse or real phone touch):
+- Source commit OR all file hashes matching docs/gate1-fix-review-hashes.json:
+- Config identity / relevant rates and reset timings:
+- Place file/version / saved after approved Rojo sync / loaded-script identity:
+- Player count / console-log or recording path:
+- Session start/end / interruptions / overall PASS, FAIL, VOID or NOT RUN:
+
+| Catch | Ghost / bait | Grade | Receipt count / Catches total | Next spawn time | Console or video reference | PASS / FAIL / NOT RUN | Notes |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | | | | | | NOT RUN | |
+| 2 | | | | | | NOT RUN | |
+| 3 | | | | | | NOT RUN | |
+| 4 | | | | | | NOT RUN | |
+| 5 | | | | | | NOT RUN | |
+| 6 | | | | | | NOT RUN | |
+| 7 | | | | | | NOT RUN | |
+| 8 | | | | | | NOT RUN | |
+| 9 | | | | | | NOT RUN | |
+| 10 | | | | | | NOT RUN | |
+
+Record edge-case runs separately: `run ID | device/clients | scenario | source/Config | expected | actual | evidence path | PASS/FAIL/BLOCKED/NOT RUN`. Save raw console output; distinguish engine/plugin warnings from game errors. Do not infer a test passed from the absence of errors alone.
 
 ## Edge cases (separate from the streaks)
 
@@ -34,8 +60,10 @@ Run on both input types where applicable, with a two-client server for co-op/lea
 | Player leaves | Contributor leaves at partial fill and near completion; remaining player continues. Repeat with last player leaving. | Departing contribution/aim clears, remaining rate is correct, reset is possible, and no duplicate completion occurs. |
 | Two players | Compare solo and two-player fill; release one, then finish simultaneously. | Rate matches formula, drops when one leaves light, one catch completion occurs; receipts follow agreed eligibility. |
 | Rapid spam | Send bait/jar requests above configured rate using a controlled test client. | Server enforces limit, no extra progress/completions or bait placement; normal input recovers after limit window. |
-| Timeout / reset | Let timer expire at partial and near-full progress; reset repeatedly. | Agreed timeout precedence; old timers/aim/requests cannot affect next catch; no stale ring or completion. |
-| Join mid-catch | Second client joins during Curious and during Caught. | Receives authoritative current state; cannot claim an already completed catch. |
+| House timer expiry — BLOCKED | No timer exists. Await Joseph's explicit decision to implement it in Gate 1 or defer it. | Do not record PASS or waived. If implemented, test expiry at partial/near-full progress against agreed precedence; if deferred, record the approved scope change. |
+| House reset (separate from timer expiry) | Use the Studio-only server reset hook with partial/near-full progress; stop old aim delivery before reset, rebait and send no new aim. | Progress remains zero until fresh aim; pending respawns cannot create extra ghosts; no stale completion. Mark tooling unavailable as NOT RUN, not timer-blocked. |
+| Curious timeout (separate from house timer) | Place liked bait, stop all aim and wait Config.CuriousTimeout with zero progress. | Bait removed, ghost returns to Drifting and correct bait works again. This test is available now. |
+| Join mid-catch | Join during Curious: first observe without contributing, then separately join and contribute. Also join after Caught. | Observer receives no credit; a contributor still present at completion gets one credit under the current eligibility rule. Joining after completion never grants that catch retroactively. |
 
 ## Exploit checklist
 

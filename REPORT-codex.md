@@ -1,6 +1,12 @@
 # Codex report — 2026-10-17
 
-## Latest session: F01–F04 re-review
+## Latest session: acceptance-prep review
+
+Confirmed 11/11 source files still match the approved hash manifest; no code delta to re-review. Source approval stands. Inspected Claude's new injected-keyboard 10/10 and crate/wall LOS report as supplementary builder evidence, not independently executed or real-device/co-op acceptance. Flagged F05: a mid-catch joiner who contributes is eligible for credit; the handoff's blanket no-credit expectation is wrong. Canonical test plan corrected; Claude should correct its report and stale Untested bullets.
+
+Completed the requested per-device evidence template and explicit house-timer BLOCKED status in tests/gate1-test-plan.md. Kept reset and Curious timeout separately testable. No new runtime tests, src/ edits, feature commits or merges. Gate 1 stays open for manual PC/phone/co-op/lifecycle tests and the timer scope decision.
+
+## Previous session: F01–F04 re-review
 
 Approved all four fixes in the uncommitted source on ee37a82; no new actionable finding in the seven changed source files. releaseJar covers input lifecycle, bait ingress and notices are independently throttled, house reset clears aims/catches, and requested tunables moved to Config. Studio-only ServerStorage reset hook acceptable in source. Exact reviewed file hashes are in docs/gate1-fix-review-hashes.json.
 

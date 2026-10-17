@@ -23,8 +23,8 @@ Gate 1: Foundation (time box ~3 weeks at ~8 hrs/week; placeholder). Exit: 10 cat
 ## Active work
 | Agent | Task | Branch | State |
 | --- | --- | --- | --- |
-| Claude Code | Gate 1 review fixes F01–F04 | feat/gate1-foundation | uncommitted fixes on ee37a82 approved in source by Codex; source publication and manual acceptance pending |
-| Codex | Support data and Gate 1 re-review | main (user authorized finished updates) | COMPLETE; F01–F04 fixed in reviewed source; gameplay acceptance pending |
+| Claude Code | Gate 1 acceptance prep | feat/gate1-foundation | source still approved/uncommitted; supplementary injected-input and LOS results reported; F05 handoff correction and manual acceptance pending |
+| Codex | Acceptance-prep review and evidence template | main (user authorized finished updates) | COMPLETE; 11/11 hashes match; F05 recorded; Gate 1 acceptance pending |
 
 ## Publication audit (2026-10-17)
 - GitHub main matched local main at 8d12e99 when checked; REVIEW.md's GitHub blob matched local main exactly. Codex report, starter data, validator and test plan are published.
@@ -32,6 +32,7 @@ Gate 1: Foundation (time box ~3 weeks at ~8 hrs/week; placeholder). Exit: 10 cat
 - The active feature checkout predates the review updates on main. Its old “code review pending” row and empty REVIEW.md are stale; read `git show main:REVIEW.md` for findings. No source merge, branch switch or feature push was performed by this audit.
 
 ## Requests between agents
+- Codex -> Claude Code: Acceptance-prep review complete; 11/11 source hashes unchanged. Correct F05 in the join-mid-catch handoff checklist and reconcile older Untested bullets with newer evidence. Requested device-log template and explicit timer BLOCKED status are now in tests/gate1-test-plan.md on main. Source approval stands; manual acceptance remains open.
 - Codex -> Claude Code: Re-review complete: F01–F04 fixed in source; debug hook acceptable. Preserve the reviewed snapshot (docs/gate1-fix-review-hashes.json), update your commit/publication status when ready, then execute manual acceptance. Previous requests to fix these four findings are superseded. No code committed or merged by Codex.
 - Claude Code -> Joseph: House timer has no implementation; confirm whether to defer it or include it in Gate 1 before treating timer-expiry acceptance as waived.
 - Codex -> Claude Code: Read the completed review on main, fix F01–F04 and update your report/status with evidence. Your feature code/report are local only as of this audit; publication remains outstanding. Do not treat the old feature-checkout REVIEW.md as current.
@@ -47,6 +48,7 @@ Gate 1: Foundation (time box ~3 weeks at ~8 hrs/week; placeholder). Exit: 10 cat
 - Three-room data is starter content only; Gate 1 runtime remains one room/one ghost.
 
 ## Session log
+- 2026-10-17, Codex: Reviewed acceptance-prep report; independently matched 11/11 approved source hashes. Recorded F05 handoff expectation error (contributing joiners are eligible), added per-device evidence logs, and split timer-expiry BLOCKED from available reset/Curious-timeout tests. Claude reports 10/10 injected-keyboard and LOS checks; no new gameplay tests run by Codex. Source remains uncommitted, device/co-op tests pending.
 - 2026-10-17, Codex: Re-reviewed seven uncommitted source fixes on ee37a82 and Studio-only reset hook; F01–F04 fixed in source, no new actionable findings. Validator, whitespace and Rojo packaging passed. Claude's regression evidence inspected but not rerun; real input/device/co-op acceptance still pending. No src/ changes or merge.
 - 2026-10-17, Claude Code: Published REPORT-claude-code.md and the Gate 1 rules/runtime mapping to main at the user's request. Feature code not merged; Codex verdict is request changes. Next: fix F01–F04 on feat/gate1-foundation with evidence.
 - 2026-10-17, Claude Code: Installed Rokit 1.2.0 + Rojo 7.7.1 (+ Studio plugin). Built the Gate 1 greybox on feat/gate1-foundation and the greybox room in the place. 10-catch scripted solo run passed (real input, 2-client and phone runs not done).
