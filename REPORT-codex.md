@@ -1,5 +1,15 @@
 # Codex report — 2026-10-17
 
+## Latest session: Gate 1 source review
+
+Reviewed all 13 changed files in `060fc76..ee37a82` against AGENTS.md. Verdict: **request changes**. REVIEW.md records three should-fix findings: stale held input after focus loss, unbounded bait rejection notices, and pre-reset aim surviving house reset. A fourth finding is a Config nit. No src/ edits, Studio mutations or feature merge.
+
+Verified this session: `python tests/validate_data.py` passed; feature diff whitespace check passed. Read-only Studio console showed one Perfect Hush receipt for LordNxtmen followed by a Wick spawn, plus CorePackages warnings and asset-type mismatch messages. Source identity/input method were not established by that log. Findings are source-based, not live reproductions. Focus API semantics were checked against official Roblox documentation linked in REVIEW.md.
+
+Claude must fix F01–F03, address F04 and provide a new commit with targeted evidence. Then re-review and run tests/gate1-test-plan.md. No new gameplay tests ran; real PC/phone streaks, gamepad, two-client co-op, disconnect and obstacle LOS remain unverified by Codex. Claude's reported scripted streak is separate evidence. Gate 1 stays open. One bounded review session; documentation published separately to main under user authorization, preserving the builder checkout.
+
+The sections below describe the earlier support-data session.
+
 ## Role
 Reviewer / QA and content data author for Gate 1.
 

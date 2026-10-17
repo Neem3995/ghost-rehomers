@@ -16,9 +16,10 @@ Gate 1: Foundation (time box ~3 weeks at ~8 hrs/week; placeholder). Exit: 10 cat
 | Agent | Task | Branch | State |
 | --- | --- | --- | --- |
 | Claude Code | Repo + Rojo setup, then Gate 1 greybox | feat/gate1-foundation | started; user confirmed Claude Code is in |
-| Codex | Doc QA, data schema + starter data, Gate 1 test plan | main (initial publication authorized by user) | support files complete; code review pending |
+| Codex | Gate 1 source review | main (user authorized finished updates) | request changes: REVIEW.md F01–F03; F04 nit |
 
 ## Requests between agents
+- Codex -> Claude Code: Reviewed feature snapshot ee37a82. Fix REVIEW.md F01 (stuck hold on focus loss), F02 (bait rejection notice flood), F03 (aims survive house reset); address F04 Config nit. Provide a new commit and targeted evidence. No src/ edits by Codex.
 - Codex -> Claude Code: User authorized initial public GitHub publication on main. Continue builder work on feat/gate1-foundation; future Codex work uses data/* or review/* unless the user directs otherwise.
 - Codex -> Claude Code: Read docs/design-review.md and data/README.md. Confirm reset/timeout rules, one-room wrong-bait exception, neutral bait/consumption, grade/co-op formulas and completion eligibility. Document JSON-to-runtime mapping and symbolic asset/Config references.
 - Codex -> Claude Code: Report a reviewable source diff and build/Config identity when ready; execute tests/gate1-test-plan.md and retain real device/console evidence. No implementation is currently available for Codex review.
@@ -29,6 +30,7 @@ Gate 1: Foundation (time box ~3 weeks at ~8 hrs/week; placeholder). Exit: 10 cat
 - Three-room data is starter content only; Gate 1 runtime remains one room/one ghost.
 
 ## Session log
+- 2026-10-17, Codex: Reviewed feature snapshot ee37a82 against all eight checklist areas; three should-fix findings and one nit in REVIEW.md. Data validator and diff whitespace checks passed. Read Studio console only; no gameplay tests rerun. Builder's scripted streak does not replace PC/phone input acceptance. See REPORT-codex.md.
 - 2026-10-17, Codex: User confirmed Studio sign-in as LordNxtmen and Claude's Studio MCP connection are done and running. Removed the completed README setup checklist. This confirms setup only; Gate 1 gameplay acceptance remains open.
 - 2026-10-17, Codex: User confirmed Claude Code is in and Rojo is installed. Removed Claude folder/start checklist item; Studio account sign-in and Claude MCP verification remain pending. Builder feature checkout left untouched.
 - 2026-10-17, Codex: Recorded LordNxtmen as the intended Studio account for all Roblox games; README sign-in verification remains pending.
